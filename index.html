@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <h2 class="logo">ProjectHub</h2>
+      <div class="nav-actions">
+        <button id="exploreBtn" class="nav-btn active">Explore</button>
+        <button id="submitBtn" class="nav-btn">Submit Project</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Explore Section -->
+  <section id="exploreSection" class="container section">
+    <div class="hero">
+      <h1>Explore Projects</h1>
+      <p>Discover student builds, hackathon projects, and developer ideas.</p>
+    </div>
+
+    <div class="controls card">
+      <input id="searchInput" type="text" placeholder="Search by project name or tech..." />
+      <select id="domainFilter">
+        <option value="All">All Domains</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Mobile Apps">Mobile Apps</option>
+        <option value="AI / ML">AI / ML</option>
+        <option value="Blockchain">Blockchain</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+      </select>
+    </div>
+
+    <div id="projectsGrid" class="grid"></div>
+  </section>
+
+  <!-- Submit Section -->
+  <section id="submitSection" class="container section hidden">
+    <div class="hero">
+      <h1>Submit Your Project</h1>
+      <p>Add your project with tech stack and links.</p>
+    </div>
+
+    <form id="projectForm" class="card form">
+      <div class="form-group">
+        <label>Project Name</label>
+        <input id="titleInput" type="text" placeholder="e.g. Expense Tracker" required />
+      </div>
+
+      <div class="form-group">
+        <label>Domain</label>
+        <select id="domainInput">
+          <option>Web Development</option>
+          <option>Mobile Apps</option>
+          <option>AI / ML</option>
+          <option>Blockchain</option>
+          <option>Cybersecurity</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tech Stack (comma separated)</label>
+        <input id="techInput" type="text" placeholder="e.g. React, Node, MongoDB" />
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="descInput" rows="4" placeholder="Write a short project description..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>GitHub Link</label>
+        <input id="githubInput" type="url" placeholder="https://github.com/..." />
+      </div>
+
+      <div class="form-group">
+        <label>Live Demo Link</label>
+        <input id="liveInput" type="url" placeholder="https://..." />
+      </div>
+
+      <button class="btn" type="submit">Submit Project</button>
+    </form>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Project Title</h2>
+        <button id="closeModal" class="close-btn">✕</button>
+      </div>
+      <p id="modalDomain" class="pill">Domain</p>
+      <p id="modalDesc" class="modal-desc"></p>
+
+      <h3>Tech Stack</h3>
+      <div id="modalTech" class="pill-wrap"></div>
+
+      <div class="modal-links">
+        <a id="modalGithub" class="btn" href="#" target="_blank">GitHub</a>
+        <a id="modalLive" class="btn secondary" href="#" target="_blank">Live Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>ProjectHub © 2026 | Built by Sagnik Sen</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
