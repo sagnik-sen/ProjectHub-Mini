@@ -31,6 +31,7 @@ This is the **Mini Version (First Review Submission)** of the ProjectHub project
 - 💾 Save projects using LocalStorage
 - 🏷 Tags-based filtering
 - 🔐 User login & profile system
+- 🙎Adding collaborators to project
 
 ---
 
